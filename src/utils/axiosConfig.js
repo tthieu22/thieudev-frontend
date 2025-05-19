@@ -1,4 +1,4 @@
-export const base_url = "http://tthieudev.duckdns.org/api/";
+export const base_url = "https://tthieudev.duckdns.org/api/";
 
 const getTokenFromLocalStorage = localStorage.getItem("token");
 

@@ -1,4 +1,3 @@
-import { toast } from "react-toastify";
 import { isTokenExpired } from "./checkTokenExpired";
 
 // export const base_url = "http://localhost:5000/api/";
@@ -8,11 +7,6 @@ export const getConfig = () => {
   const token = localStorage.getItem("token");
 
   if (!token || isTokenExpired(token)) {
-    toast.info("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.", {
-      onClick: () => {
-        window.location.href = "/login";
-      },
-    });
     localStorage.removeItem("token");
     localStorage.removeItem("customer");
     return {
